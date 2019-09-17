@@ -1,3 +1,10 @@
 module.exports = {
-    plugins: ['gatsby-theme-instagram']
+    plugins: [
+        {
+            resolve: 'gatsby-theme-instagram',
+            options: {
+                username: 'nbcthisisus'
+            }
+        }
+    ]
 };
