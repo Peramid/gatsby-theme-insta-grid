@@ -1,8 +1,8 @@
 import React from "react";
-import { Grid } from "gatsby-theme-instagram";
+import { InstagramGrid } from "gatsby-theme-instagram";
 
 const Index = () => {
-  return <Grid></Grid>;
+  return <InstagramGrid></InstagramGrid>;
 };
 
 export default Index;
