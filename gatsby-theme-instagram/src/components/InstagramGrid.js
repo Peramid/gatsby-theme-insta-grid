@@ -43,7 +43,10 @@ const InstagramGrid = () => {
               border: theme => `1px solid ${theme.colors.primary}`
             }}
           >
-            <Image fluid={post.image} />
+            <Image
+              sx={{ height: "300px", maxHeight: "300px", minHeight: "300px" }}
+              fluid={post.image}
+            />
 
             <div
               sx={{
