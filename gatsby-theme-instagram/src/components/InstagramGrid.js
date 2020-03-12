@@ -2,7 +2,6 @@
 import { jsx, Flex, Box, useColorMode, Styled } from "theme-ui";
 import { Fragment } from "react";
 import Image from "gatsby-image";
-import { css } from "@emotion/core";
 import HeartIcon from "./HeartIcon";
 import useInstagramPosts from "../hooks/useInstagramPosts";
 
