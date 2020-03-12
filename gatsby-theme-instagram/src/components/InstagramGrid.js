@@ -1,5 +1,5 @@
 /** @jsx jsx  */
-import { jsx, Flex, Box, useColorMode } from "theme-ui";
+import { jsx, Flex, Box, useColorMode, Styled } from "theme-ui";
 import { Fragment } from "react";
 import Image from "gatsby-image";
 import { css } from "@emotion/core";
@@ -18,6 +18,7 @@ const InstagramGrid = () => {
 
   return (
     <Fragment>
+      <Styled.h1>Username</Styled.h1>
       <button
         onClick={e => {
           setColorMode(colorMode === "default" ? "dark" : "default");
@@ -38,7 +39,6 @@ const InstagramGrid = () => {
             sx={{
               flex: "0 1 300px",
               m: 3,
-              p: 2,
               backgroundColor: "background",
               border: theme => `1px solid ${theme.colors.primary}`
             }}
@@ -50,15 +50,18 @@ const InstagramGrid = () => {
 
             <div
               sx={{
-                height: "100px"
+                p: 2
               }}
             >
-              <span>
-                <HeartIcon width={40} height={40} />
-              </span>
-              <span>{`${formatNumber(post.likes)} likes`}</span>
+              <p>
+                <span>
+                  <HeartIcon width={40} height={40} />
+                </span>
+                {`${formatNumber(post.likes)} likes`}
+              </p>
+
+              <p>{post.caption}</p>
             </div>
-            <p>{post.caption}</p>
           </Box>
         ))}
       </Flex>
