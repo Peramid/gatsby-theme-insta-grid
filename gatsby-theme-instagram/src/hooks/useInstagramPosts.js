@@ -12,7 +12,7 @@ const useInstagramPosts = () => {
           localFile {
             childImageSharp {
               fluid {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
