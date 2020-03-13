@@ -3,10 +3,7 @@ import { jsx, Box } from "theme-ui";
 import { Fragment } from "react";
 import Image from "gatsby-image";
 import HeartIcon from "./HeartIcon";
-
-function formatNumber(num) {
-  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
-}
+import { formatNumber } from "../utils/functions";
 
 const ComplexGrid = ({ instagramPosts }) => {
   return (
