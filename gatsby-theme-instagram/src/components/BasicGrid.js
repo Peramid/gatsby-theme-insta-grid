@@ -1,7 +1,7 @@
 /** @jsx jsx  */
 import { jsx, Box } from "theme-ui";
 import { Fragment } from "react";
-import Image from "gatsby-image";
+import Img from "gatsby-image";
 
 const BasicGrid = ({ instagramPosts }) => {
   return (
@@ -14,9 +14,10 @@ const BasicGrid = ({ instagramPosts }) => {
             backgroundColor: "background"
           }}
         >
-          <Image
+          <Img
             sx={{ width: "300px", height: "300px", objectFit: "cover" }}
             fluid={post.image}
+            alt={post.caption}
           />
         </Box>
       ))}
