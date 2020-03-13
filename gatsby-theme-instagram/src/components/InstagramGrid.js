@@ -43,7 +43,7 @@ const InstagramGrid = () => {
             }}
           >
             <Image
-              sx={{ height: "300px", maxHeight: "300px", minHeight: "300px" }}
+              sx={{ width: "300px", height: "300px", objectFit: "cover" }}
               fluid={post.image}
             />
 
