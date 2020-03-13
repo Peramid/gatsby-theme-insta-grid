@@ -1,7 +1,7 @@
 /** @jsx jsx  */
 import { jsx, Box } from "theme-ui";
 import { Fragment } from "react";
-import Image from "gatsby-image";
+import Image from "./Image";
 import HeartIcon from "./HeartIcon";
 import { formatNumber } from "../utils/functions";
 
@@ -18,11 +18,7 @@ const ComplexGrid = ({ instagramPosts }) => {
             border: theme => `1px solid ${theme.colors.primary}`
           }}
         >
-          <Image
-            sx={{ width: "300px", height: "300px", objectFit: "cover" }}
-            fluid={post.image}
-            alt={post.caption}
-          />
+          <Image fluid={post.image} alt={post.caption} />
 
           <div
             sx={{
