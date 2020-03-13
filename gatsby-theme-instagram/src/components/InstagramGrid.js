@@ -2,6 +2,7 @@
 import { jsx, Flex } from "theme-ui";
 import useInstagramPosts from "../hooks/useInstagramPosts";
 import ComplexGrid from "./ComplexGrid";
+import BasicGrid from "./BasicGrid";
 
 const InstagramGrid = () => {
   const instagramPosts = useInstagramPosts();
@@ -16,6 +17,7 @@ const InstagramGrid = () => {
       }}
     >
       <ComplexGrid instagramPosts={instagramPosts} />
+      <BasicGrid instagramPosts={instagramPosts} />
     </Flex>
   );
 };
