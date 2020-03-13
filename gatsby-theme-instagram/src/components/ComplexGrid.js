@@ -21,6 +21,7 @@ const ComplexGrid = ({ instagramPosts }) => {
           <Image
             sx={{ width: "300px", height: "300px", objectFit: "cover" }}
             fluid={post.image}
+            alt={post.caption}
           />
 
           <div
