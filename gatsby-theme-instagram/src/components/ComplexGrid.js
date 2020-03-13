@@ -1,5 +1,5 @@
 /** @jsx jsx  */
-import { jsx, Flex, Box, useColorMode, Styled } from "theme-ui";
+import { jsx, Box } from "theme-ui";
 import { Fragment } from "react";
 import Image from "gatsby-image";
 import HeartIcon from "./HeartIcon";
