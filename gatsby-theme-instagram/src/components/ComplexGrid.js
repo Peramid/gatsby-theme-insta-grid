@@ -3,7 +3,7 @@ import { jsx, Box } from "theme-ui";
 import { Fragment } from "react";
 import Image from "./Image";
 import HeartIcon from "./HeartIcon";
-import { formatNumber } from "../utils/functions";
+import { formatNumber } from "../utils/utils";
 
 const ComplexGrid = ({ instagramPosts }) => {
   return (
