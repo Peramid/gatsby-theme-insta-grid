@@ -1,1 +1,1 @@
-export { default as InstagramGrid } from "./src/components/InstagramGrid";
+export { default as InstagramGrid } from "./src/components/GridContainer";
