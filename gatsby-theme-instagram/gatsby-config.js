@@ -1,4 +1,8 @@
-module.exports = ({ username = "zara" }) => ({
+module.exports = ({
+  username = undefined,
+  type = "account",
+  hashtag = undefined
+}) => ({
   plugins: [
     "gatsby-plugin-theme-ui",
     "gatsby-plugin-sharp",
@@ -6,7 +10,9 @@ module.exports = ({ username = "zara" }) => ({
     {
       resolve: "gatsby-source-instagram",
       options: {
-        username: username
+        type,
+        username,
+        hashtag
       }
     }
   ]
