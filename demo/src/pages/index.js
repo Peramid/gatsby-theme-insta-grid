@@ -1,5 +1,5 @@
 import React from "react";
-import { InstagramGrid } from "gatsby-theme-instagram";
+import { InstagramGrid } from "gatsby-theme-insta-grid";
 
 const Index = () => {
   return (
