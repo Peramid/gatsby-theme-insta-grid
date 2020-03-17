@@ -27,7 +27,6 @@
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-source-instagram": "^0.7.0",
     "gatsby-transformer-sharp": "^2.3.19",
-    "react-icons": "^3.9.0",
     "theme-ui": "^0.3.1"
   }
 }
