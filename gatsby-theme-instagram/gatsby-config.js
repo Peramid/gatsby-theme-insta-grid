@@ -1,6 +1,6 @@
 module.exports = ({
-  username = undefined,
   type = "account",
+  username = undefined,
   hashtag = undefined
 }) => ({
   plugins: [
