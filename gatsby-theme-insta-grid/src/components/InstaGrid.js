@@ -4,7 +4,7 @@ import useInstagramPosts from "../hooks/useInstagramPosts";
 import ComplexGrid from "./ComplexGrid";
 import BasicGrid from "./BasicGrid";
 
-const GridContainer = ({ gridType = null }) => {
+const InstaGrid = ({ gridType = null }) => {
   const instagramPosts = useInstagramPosts();
   console.log("posts", instagramPosts);
 
@@ -26,4 +26,4 @@ const GridContainer = ({ gridType = null }) => {
   );
 };
 
-export default GridContainer;
+export default InstaGrid;
