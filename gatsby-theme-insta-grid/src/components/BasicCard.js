@@ -1,5 +1,5 @@
 /** @jsx jsx  */
-import { jsx, Card, Text } from "theme-ui";
+import { jsx, Card } from "theme-ui";
 import Image from "./Image";
 
 const BasicCard = ({ post }) => {
