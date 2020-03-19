@@ -6,7 +6,7 @@ const HeartIcon = ({ width, height }) => (
     width={width}
     height={height}
     viewBox="0 0 326 302"
-    fill="none"
+    fill="#E3367B"
   >
     <rect
       id="Rectangle 1"
@@ -15,24 +15,9 @@ const HeartIcon = ({ width, height }) => (
       width="193.747"
       height="182.322"
       transform="rotate(-45 32 173)"
-      fill="#E3367B"
     />
-    <ellipse
-      id="Ellipse 1"
-      cx="93.5"
-      cy="99"
-      rx="93.5"
-      ry="99"
-      fill="#E3367B"
-    />
-    <ellipse
-      id="Ellipse 2"
-      cx="238.5"
-      cy="95"
-      rx="87.5"
-      ry="95"
-      fill="#E3367B"
-    />
+    <ellipse id="Ellipse 1" cx="93.5" cy="99" rx="93.5" ry="99" />
+    <ellipse id="Ellipse 2" cx="238.5" cy="95" rx="87.5" ry="95" />
   </svg>
 );
 
