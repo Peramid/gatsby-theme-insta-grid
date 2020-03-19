@@ -1,12 +1,18 @@
 /** @jsx jsx  */
 import { jsx, Flex } from "theme-ui";
 import useInstagramPosts from "../hooks/useInstagramPosts";
-import ComplexGrid from "./ComplexGrid";
-import BasicGrid from "./BasicGrid";
+import ComplexCard from "./ComplexCard";
+import BasicCard from "./BasicCard";
 
 const InstaGrid = ({ gridType = null }) => {
   const instagramPosts = useInstagramPosts();
   console.log("posts", instagramPosts);
+  const CardToShow = ({ post }) => {
+    if (gridType === "complex") {
+      return <ComplexCard post={post} />;
+    }
+    return <BasicCard post={post} />;
+  };
 
   return (
     <Flex
@@ -17,11 +23,9 @@ const InstaGrid = ({ gridType = null }) => {
         p: 3
       }}
     >
-      {gridType === "complex" ? (
-        <ComplexGrid instagramPosts={instagramPosts} />
-      ) : (
-        <BasicGrid instagramPosts={instagramPosts} />
-      )}
+      {instagramPosts.map(post => (
+        <CardToShow post={post} />
+      ))}
     </Flex>
   );
 };
