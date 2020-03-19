@@ -1,6 +1,6 @@
 module.exports = ({
   type = "account",
-  username = undefined,
+  username = "nasa",
   hashtag = undefined
 }) => ({
   plugins: [
