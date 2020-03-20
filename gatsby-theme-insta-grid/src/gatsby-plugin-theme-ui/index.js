@@ -42,14 +42,16 @@ export default {
   cards: {
     basic: {
       padding: 2,
-      margin: 3
+      margin: 3,
+      flex: "0 1 300px"
     },
     complex: {
       padding: 2,
       margin: 3,
       borderRadius: 4,
       boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
-      backgroundColor: "background"
+      backgroundColor: "background",
+      flex: "0 1 300px"
     }
   },
   text: {
