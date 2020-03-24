@@ -4,13 +4,7 @@ import Image from "./Image";
 
 const BasicCard = ({ post }) => {
   return (
-    <Card
-      key={post.id}
-      variant="basic"
-      sx={{
-        flex: "0 1 300px"
-      }}
-    >
+    <Card key={post.id} variant="basic">
       <a href={`https://www.instagram.com/p/${post.id}/`}>
         <Image fluid={post.image} alt={post.caption} />
       </a>
