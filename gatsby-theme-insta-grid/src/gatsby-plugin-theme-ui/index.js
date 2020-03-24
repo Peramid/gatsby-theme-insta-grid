@@ -31,13 +31,7 @@ console.log("theme", {
 export default {
   ...theme,
   colors: {
-    ...theme.colors,
-    modes: {
-      dark: {
-        text: "#ffffff",
-        background: "grey"
-      }
-    }
+    ...theme.colors
   },
   cards: {
     basic: {
