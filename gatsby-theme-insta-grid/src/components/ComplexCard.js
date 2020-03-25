@@ -7,14 +7,18 @@ import { formatNumber } from "../utils/utils";
 const ComplexCard = ({ post }) => {
   return (
     <Card key={post.id} variant="complex">
-      <a href={`https://www.instagram.com/p/${post.id}/`}>
+      <a
+        sx={{
+          display: "block"
+        }}
+        href={`https://www.instagram.com/p/${post.id}/`}
+      >
         <Image fluid={post.image} alt={post.caption} />
       </a>
-
       <Text
         variant="bold"
         sx={{
-          p: 2,
+          px: 2,
           display: "flex",
           alignItems: "center",
           justifyContent: "flex-start"
@@ -24,14 +28,16 @@ const ComplexCard = ({ post }) => {
           sx={{
             display: "flex",
             alignItems: "center",
-            margin: "0"
+            margin: "0",
+            height: "55px"
           }}
         >
-          <HeartIcon width="1rem" height="1rem" />
-
-          <p sx={{ px: 2, fontSize: 1 }}>{`${
-            post.likes ? formatNumber(post.likes) : ""
-          }`}</p>
+          {post.likes && (
+            <Fragment>
+              <HeartIcon width="1rem" height="1rem" />
+              <p sx={{ px: 2, fontSize: 1 }}>{`${formatNumber(post.likes)}`}</p>
+            </Fragment>
+          )}
         </div>
       </Text>
 
