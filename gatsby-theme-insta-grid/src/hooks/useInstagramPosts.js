@@ -11,7 +11,7 @@ const useInstagramPosts = () => {
           likes
           localFile {
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 300, maxHeight: 300) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
