@@ -45,7 +45,8 @@ const ComplexCard = ({ post }) => {
       <Text
         sx={{
           fontSize: 1,
-          lineHeight: "body"
+          lineHeight: "body",
+          wordBreak: "break-word"
         }}
       >
         {post.caption}
