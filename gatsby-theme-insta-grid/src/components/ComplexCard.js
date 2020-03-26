@@ -1,5 +1,6 @@
 /** @jsx jsx  */
 import { jsx, Card, Text } from "theme-ui";
+import { Fragment } from "react";
 import Image from "./Image";
 import HeartIcon from "./HeartIcon";
 import { formatNumber } from "../utils/utils";
