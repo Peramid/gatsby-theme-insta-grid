@@ -1,7 +1,7 @@
 /** @jsx jsx  */
 import { jsx, Card, Text } from "theme-ui";
 import { Fragment } from "react";
-import Image from "./Image";
+import Img from "gatsby-image";
 import HeartIcon from "./HeartIcon";
 import { formatNumber } from "../utils/utils";
 
@@ -14,7 +14,7 @@ const ComplexCard = ({ post }) => {
         }}
         href={`https://www.instagram.com/p/${post.id}/`}
       >
-        <Image fluid={post.image} alt={post.caption} />
+        <Img fluid={post.image} alt={post.caption} />
       </a>
       <Text
         variant="bold"

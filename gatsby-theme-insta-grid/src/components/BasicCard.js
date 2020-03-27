@@ -1,12 +1,12 @@
 /** @jsx jsx  */
 import { jsx, Card } from "theme-ui";
-import Image from "./Image";
+import Img from "gatsby-image";
 
 const BasicCard = ({ post }) => {
   return (
     <Card key={post.id} variant="basic">
       <a href={`https://www.instagram.com/p/${post.id}/`}>
-        <Image fluid={post.image} alt={post.caption} />
+        <Img fluid={post.image} alt={post.caption} />
       </a>
     </Card>
   );
