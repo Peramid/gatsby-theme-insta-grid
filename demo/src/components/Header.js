@@ -5,14 +5,21 @@ const Header = () => {
   return (
     <header
       sx={{
-        my: 4,
-        mx: "auto",
-        maxWidth: 980,
-        width: "90vw",
         backgroundColor: "primary"
       }}
     >
-      Gatsby Theme Insta Grid
+      <div
+        sx={{
+          py: 3,
+          mx: "auto",
+          maxWidth: 980,
+          width: "90vw",
+          color: "background",
+          fontWeight: "bold"
+        }}
+      >
+        Gatsby Theme Insta Grid
+      </div>
     </header>
   );
 };
