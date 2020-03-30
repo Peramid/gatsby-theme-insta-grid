@@ -1,3 +1,5 @@
 export function formatNumber(num) {
-  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+  if (num >= 1000 && num < 1000000) return +(num / 1e3).toFixed(1) + "K";
+  if (num >= 1000000) return +(num / 1e6).toFixed(1) + "M";
+  return num;
 }
