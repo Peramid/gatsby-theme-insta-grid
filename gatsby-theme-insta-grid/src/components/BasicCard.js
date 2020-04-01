@@ -3,6 +3,7 @@ import { jsx, Card } from "theme-ui";
 import { Fragment } from "react";
 import Img from "gatsby-image";
 import HeartIcon from "./HeartIcon";
+import CommentIcon from "./CommentIcon";
 import { formatNumber } from "../utils/utils";
 
 const BasicCard = ({ post }) => {
@@ -40,7 +41,17 @@ const BasicCard = ({ post }) => {
           {post.likes && (
             <Fragment>
               <HeartIcon width="1rem" height="1rem" fill="#ffffff" />
-              <p sx={{ px: 2, fontSize: 1 }}>{`${formatNumber(post.likes)}`}</p>
+              <p
+                sx={{ px: 2, fontSize: 1, fontWeight: "bold" }}
+              >{`${formatNumber(post.likes)}`}</p>
+            </Fragment>
+          )}
+          {post.comments && (
+            <Fragment>
+              <CommentIcon fill="#ffffff" />
+              <p
+                sx={{ px: 2, fontSize: 1, fontWeight: "bold" }}
+              >{`${formatNumber(post.comments)}`}</p>
             </Fragment>
           )}
         </div>
