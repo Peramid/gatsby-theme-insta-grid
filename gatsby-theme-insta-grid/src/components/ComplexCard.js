@@ -3,6 +3,7 @@ import { jsx, Card, Text } from "theme-ui";
 import { Fragment } from "react";
 import Img from "gatsby-image";
 import HeartIcon from "./HeartIcon";
+import CommentIcon from "./CommentIcon";
 import { formatNumber } from "../utils/utils";
 
 const ComplexCard = ({ post }) => {
@@ -17,7 +18,6 @@ const ComplexCard = ({ post }) => {
         <Img fluid={post.image} alt={post.caption} />
       </a>
       <Text
-        variant="bold"
         sx={{
           px: 2,
           display: "flex",
@@ -35,8 +35,18 @@ const ComplexCard = ({ post }) => {
         >
           {post.likes && (
             <Fragment>
-              <HeartIcon width="1rem" height="1rem" />
-              <p sx={{ px: 2, fontSize: 1 }}>{`${formatNumber(post.likes)}`}</p>
+              <HeartIcon />
+              <p
+                sx={{ px: 2, fontSize: 1, fontWeight: "bold" }}
+              >{`${formatNumber(post.likes)}`}</p>
+            </Fragment>
+          )}
+          {post.comments && (
+            <Fragment>
+              <CommentIcon />
+              <p
+                sx={{ px: 2, fontSize: 1, fontWeight: "bold" }}
+              >{`${formatNumber(post.comments)}`}</p>
             </Fragment>
           )}
         </div>
