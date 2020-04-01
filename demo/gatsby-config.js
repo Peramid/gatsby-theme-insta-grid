@@ -3,7 +3,7 @@ module.exports = {
     {
       resolve: "gatsby-theme-insta-grid",
       options: {
-        username: "nbcthisisus"
+        username: "nasa"
       }
     }
   ]
