@@ -1,6 +1,6 @@
 import React from "react";
 
-const HeartIcon = ({ width, height, fill = "black" }) => (
+const HeartIcon = ({ width = "1rem", height = "1rem", fill = "black" }) => (
   <svg
     width={width}
     height={height}
