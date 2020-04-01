@@ -20,10 +20,5 @@ export default {
       backgroundColor: "background",
       flex: "0 1 300px"
     }
-  },
-  text: {
-    bold: {
-      fontWeight: "bold"
-    }
   }
 };
