@@ -9,6 +9,7 @@ const useInstagramPosts = () => {
           username
           caption
           likes
+          comments
           localFile {
             childImageSharp {
               fluid(maxWidth: 300, maxHeight: 300) {
@@ -21,11 +22,12 @@ const useInstagramPosts = () => {
     }
   `);
   return data.allInstaNode.nodes.map(node => ({
-    image: node.localFile.childImageSharp.fluid,
     id: node.id,
+    username: node.username,
     caption: node.caption,
     likes: node.likes,
-    username: node.username
+    comments: node.comments,
+    image: node.localFile.childImageSharp.fluid
   }));
 };
 
