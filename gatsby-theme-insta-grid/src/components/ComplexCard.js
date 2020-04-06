@@ -1,5 +1,5 @@
 /** @jsx jsx  */
-import { jsx, Card, Text } from "theme-ui";
+import { jsx, Card, Text, Flex } from "theme-ui";
 import { Fragment } from "react";
 import Img from "gatsby-image";
 import HeartIcon from "./HeartIcon";
@@ -17,40 +17,29 @@ const ComplexCard = ({ post }) => {
       >
         <Img fluid={post.image} alt={post.caption} />
       </a>
-      <Text
+      <Flex
         sx={{
-          px: 2,
-          display: "flex",
           alignItems: "center",
-          justifyContent: "flex-start"
+          justifyContent: "flex-end"
         }}
       >
-        <div
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            margin: "0",
-            height: "55px"
-          }}
-        >
-          {post.likes && (
-            <Fragment>
-              <HeartIcon />
-              <p
-                sx={{ px: 2, fontSize: 1, fontWeight: "bold" }}
-              >{`${formatNumber(post.likes)}`}</p>
-            </Fragment>
-          )}
-          {post.comments && (
-            <Fragment>
-              <CommentIcon />
-              <p
-                sx={{ px: 2, fontSize: 1, fontWeight: "bold" }}
-              >{`${formatNumber(post.comments)}`}</p>
-            </Fragment>
-          )}
-        </div>
-      </Text>
+        {post.likes && (
+          <Fragment>
+            <HeartIcon />
+            <p sx={{ px: 2, fontSize: 2, fontWeight: "bold" }}>{`${formatNumber(
+              post.likes
+            )}`}</p>
+          </Fragment>
+        )}
+        {post.comments && (
+          <Fragment>
+            <CommentIcon />
+            <p sx={{ px: 2, fontSize: 2, fontWeight: "bold" }}>{`${formatNumber(
+              post.comments
+            )}`}</p>
+          </Fragment>
+        )}
+      </Flex>
 
       <Text
         sx={{
