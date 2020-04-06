@@ -6,7 +6,7 @@ import HeartIcon from "./HeartIcon";
 import CommentIcon from "./CommentIcon";
 import { formatNumber } from "../utils/utils";
 
-const ComplexCard = ({ post }) => {
+const ComplexCard = ({ post, showCaption }) => {
   return (
     <Card key={post.id} variant="complex">
       <a
@@ -40,16 +40,17 @@ const ComplexCard = ({ post }) => {
           </Fragment>
         )}
       </Flex>
-
-      <Text
-        sx={{
-          fontSize: 1,
-          lineHeight: "body",
-          wordBreak: "break-word"
-        }}
-      >
-        {post.caption}
-      </Text>
+      {showCaption && (
+        <Text
+          sx={{
+            fontSize: 1,
+            lineHeight: "body",
+            wordBreak: "break-word"
+          }}
+        >
+          {post.caption}
+        </Text>
+      )}
     </Card>
   );
 };
