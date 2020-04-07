@@ -4,6 +4,7 @@ import { Fragment } from "react";
 import Img from "gatsby-image";
 import HeartIcon from "./HeartIcon";
 import CommentIcon from "./CommentIcon";
+import NumberText from "./NumberText";
 import { formatNumber } from "../utils/utils";
 
 const ComplexCard = ({ post, showCaption }) => {
@@ -20,23 +21,20 @@ const ComplexCard = ({ post, showCaption }) => {
       <Flex
         sx={{
           alignItems: "center",
-          justifyContent: "flex-end"
+          justifyContent: "flex-end",
+          py: 2
         }}
       >
         {post.likes && (
           <Fragment>
             <HeartIcon />
-            <p sx={{ px: 2, fontSize: 2, fontWeight: "bold" }}>{`${formatNumber(
-              post.likes
-            )}`}</p>
+            <NumberText>{`${formatNumber(post.likes)}`}</NumberText>
           </Fragment>
         )}
         {post.comments && (
           <Fragment>
             <CommentIcon />
-            <p sx={{ px: 2, fontSize: 2, fontWeight: "bold" }}>{`${formatNumber(
-              post.comments
-            )}`}</p>
+            <NumberText>{`${formatNumber(post.comments)}`}</NumberText>
           </Fragment>
         )}
       </Flex>
