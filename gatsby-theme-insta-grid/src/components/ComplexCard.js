@@ -12,12 +12,7 @@ const ComplexCard = ({ post, showCaption }) => {
 
   return (
     <Card key={post.id} variant="complex">
-      <a
-        sx={{
-          display: "block"
-        }}
-        href={`https://www.instagram.com/p/${post.id}/`}
-      >
+      <a href={`https://www.instagram.com/p/${post.id}/`}>
         <Img fluid={post.image} alt={post.caption} />
       </a>
       <Flex
