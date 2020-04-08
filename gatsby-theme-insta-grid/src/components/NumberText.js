@@ -1,7 +1,7 @@
 /** @jsx jsx  */
 import { jsx } from "theme-ui";
 
-const NumberText = ({ children }) => {
+const NumberText = ({ children, color }) => {
   return (
     <p
       sx={{
@@ -9,7 +9,8 @@ const NumberText = ({ children }) => {
         pr: 2,
         m: "0",
         fontSize: 2,
-        fontWeight: "bold"
+        fontWeight: "bold",
+        color
       }}
     >
       {children}
