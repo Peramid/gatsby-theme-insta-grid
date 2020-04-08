@@ -9,15 +9,15 @@ export default {
   },
   cards: {
     basic: {
-      margin: 3,
+      margin: 2,
       flex: "0 1 300px"
     },
     complex: {
       padding: 2,
-      margin: 3,
+      margin: 2,
       borderRadius: 4,
       boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
-      backgroundColor: "background",
+      backgroundColor: "#ffffff",
       flex: "0 1 300px"
     }
   }
