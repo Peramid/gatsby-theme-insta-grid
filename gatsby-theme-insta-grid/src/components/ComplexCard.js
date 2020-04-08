@@ -1,5 +1,5 @@
 /** @jsx jsx  */
-import { jsx, Card, Text, Flex } from "theme-ui";
+import { jsx, Card, Text, Flex, useThemeUI } from "theme-ui";
 import { Fragment } from "react";
 import Img from "gatsby-image";
 import HeartIcon from "./HeartIcon";
@@ -8,6 +8,8 @@ import NumberText from "./NumberText";
 import { formatNumber } from "../utils/utils";
 
 const ComplexCard = ({ post, showCaption }) => {
+  const { theme } = useThemeUI();
+
   return (
     <Card key={post.id} variant="complex">
       <a
@@ -27,14 +29,18 @@ const ComplexCard = ({ post, showCaption }) => {
       >
         {post.likes && (
           <Fragment>
-            <HeartIcon />
-            <NumberText>{`${formatNumber(post.likes)}`}</NumberText>
+            <HeartIcon fill={theme.colors.text} />
+            <NumberText color={theme.colors.text}>
+              {`${formatNumber(post.likes)}`}
+            </NumberText>
           </Fragment>
         )}
         {post.comments && (
           <Fragment>
-            <CommentIcon />
-            <NumberText>{`${formatNumber(post.comments)}`}</NumberText>
+            <CommentIcon fill={theme.colors.text} />
+            <NumberText color={theme.colors.text}>{`${formatNumber(
+              post.comments
+            )}`}</NumberText>
           </Fragment>
         )}
       </Flex>
