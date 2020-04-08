@@ -35,20 +35,23 @@ const BasicCard = ({ post }) => {
             top: 0,
             left: 0,
             opacity: 0,
-            transition: "opacity 0.3s",
-            color: "background"
+            transition: "opacity 0.3s"
           }}
         >
           {post.likes && (
             <Fragment>
-              <HeartIcon width="1rem" height="1rem" fill="#ffffff" />
-              <NumberText>{`${formatNumber(post.likes)}`}</NumberText>
+              <HeartIcon fill="#ffffff" />
+              <NumberText color="#ffffff">{`${formatNumber(
+                post.likes
+              )}`}</NumberText>
             </Fragment>
           )}
           {post.comments && (
             <Fragment>
               <CommentIcon fill="#ffffff" />
-              <NumberText>{`${formatNumber(post.comments)}`}</NumberText>
+              <NumberText color="#ffffff">{`${formatNumber(
+                post.comments
+              )}`}</NumberText>
             </Fragment>
           )}
         </div>
