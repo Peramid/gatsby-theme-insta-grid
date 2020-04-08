@@ -4,12 +4,12 @@ import useInstagramPosts from "../hooks/useInstagramPosts";
 import ComplexCard from "./ComplexCard";
 import BasicCard from "./BasicCard";
 
-const InstaGrid = ({ gridType = null }) => {
+const InstaGrid = ({ gridType = null, showCaption = false }) => {
   const instagramPosts = useInstagramPosts();
-  console.log("posts", instagramPosts);
-  const CardToShow = ({ post }) => {
+
+  const CardToShow = ({ post, showCaption }) => {
     if (gridType === "complex") {
-      return <ComplexCard post={post} />;
+      return <ComplexCard post={post} showCaption={showCaption} />;
     }
     return <BasicCard post={post} />;
   };
@@ -19,12 +19,11 @@ const InstaGrid = ({ gridType = null }) => {
       sx={{
         justifyContent: "center",
         flexFlow: "row wrap",
-        alignItems: "stretch",
-        p: 3
+        alignItems: "stretch"
       }}
     >
       {instagramPosts.map(post => (
-        <CardToShow post={post} />
+        <CardToShow post={post} showCaption={showCaption} />
       ))}
     </Flex>
   );
