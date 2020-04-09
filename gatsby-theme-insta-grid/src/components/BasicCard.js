@@ -7,10 +7,10 @@ import CommentIcon from "./CommentIcon";
 import NumberText from "./NumberText";
 import { formatNumber } from "../utils/utils";
 
-const BasicCard = ({ post }) => {
+const BasicCard = ({ id, caption, likes, comments, image }) => {
   return (
     <Card
-      key={post.id}
+      key={id}
       variant="basic"
       sx={{
         position: "relative",
@@ -21,8 +21,8 @@ const BasicCard = ({ post }) => {
         }
       }}
     >
-      <a href={`https://www.instagram.com/p/${post.id}/`}>
-        <Img fluid={post.image} alt={post.caption} />
+      <a href={`https://www.instagram.com/p/${id}/`}>
+        <Img fluid={image} alt={caption} />
         <div
           sx={{
             display: "flex",
@@ -38,19 +38,19 @@ const BasicCard = ({ post }) => {
             transition: "opacity 0.3s"
           }}
         >
-          {post.likes && (
+          {likes && (
             <Fragment>
               <HeartIcon fill="#ffffff" />
               <NumberText color="#ffffff">{`${formatNumber(
-                post.likes
+                likes
               )}`}</NumberText>
             </Fragment>
           )}
-          {post.comments && (
+          {comments && (
             <Fragment>
               <CommentIcon fill="#ffffff" />
               <NumberText color="#ffffff">{`${formatNumber(
-                post.comments
+                comments
               )}`}</NumberText>
             </Fragment>
           )}
