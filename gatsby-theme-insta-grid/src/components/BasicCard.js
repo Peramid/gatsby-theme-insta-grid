@@ -9,18 +9,7 @@ import { formatNumber } from "../utils/utils";
 
 const BasicCard = ({ id, caption, likes, comments, image }) => {
   return (
-    <Card
-      key={id}
-      variant="basic"
-      sx={{
-        position: "relative",
-        ":hover": {
-          div: {
-            opacity: 1
-          }
-        }
-      }}
-    >
+    <Card key={id} variant="basic">
       <a href={`https://www.instagram.com/p/${id}/`}>
         <Img fluid={image} alt={caption} />
         <div
@@ -28,7 +17,7 @@ const BasicCard = ({ id, caption, likes, comments, image }) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "rgba(0,0,0,0.6)",
+            backgroundColor: "rgba(0,0,0,0.4)",
             position: "absolute",
             width: "100%",
             height: "100%",
