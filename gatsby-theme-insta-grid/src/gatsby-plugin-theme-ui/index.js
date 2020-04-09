@@ -14,6 +14,18 @@ export default {
         justifyContent: "center",
         flexFlow: "row wrap",
         alignItems: "stretch"
+      },
+      overlay: {
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "rgba(0,0,0,0.4)",
+        position: "absolute",
+        width: "100%",
+        height: "100%",
+        top: 0,
+        left: 0,
+        opacity: 0,
+        transition: "opacity 0.3s"
       }
     }
   },
