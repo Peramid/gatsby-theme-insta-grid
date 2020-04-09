@@ -6,6 +6,7 @@ import BasicCard from "./BasicCard";
 
 const InstaGrid = ({ gridType = null, showCaption = false }) => {
   const instagramPosts = useInstagramPosts();
+
   const Card = props => {
     if (props.gridType === "complex") {
       return <ComplexCard {...props} />;
