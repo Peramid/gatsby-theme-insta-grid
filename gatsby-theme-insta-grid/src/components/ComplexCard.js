@@ -7,13 +7,13 @@ import CommentIcon from "./CommentIcon";
 import NumberText from "./NumberText";
 import { formatNumber } from "../utils/utils";
 
-const ComplexCard = ({ post, showCaption }) => {
+const ComplexCard = ({ id, caption, likes, comments, image, showCaption }) => {
   const { theme } = useThemeUI();
 
   return (
-    <Card key={post.id} variant="complex">
-      <a href={`https://www.instagram.com/p/${post.id}/`}>
-        <Img fluid={post.image} alt={post.caption} />
+    <Card key={id} variant="complex">
+      <a href={`https://www.instagram.com/p/${id}/`}>
+        <Img fluid={image} alt={caption} />
       </a>
       <Flex
         sx={{
@@ -22,19 +22,19 @@ const ComplexCard = ({ post, showCaption }) => {
           py: 2
         }}
       >
-        {post.likes && (
+        {likes && (
           <Fragment>
             <HeartIcon fill={theme.colors.text} />
             <NumberText color={theme.colors.text}>
-              {`${formatNumber(post.likes)}`}
+              {`${formatNumber(likes)}`}
             </NumberText>
           </Fragment>
         )}
-        {post.comments && (
+        {comments && (
           <Fragment>
             <CommentIcon fill={theme.colors.text} />
             <NumberText color={theme.colors.text}>{`${formatNumber(
-              post.comments
+              comments
             )}`}</NumberText>
           </Fragment>
         )}
@@ -48,7 +48,7 @@ const ComplexCard = ({ post, showCaption }) => {
             color: theme.colors.text
           }}
         >
-          {post.caption}
+          {caption}
         </Text>
       )}
     </Card>
