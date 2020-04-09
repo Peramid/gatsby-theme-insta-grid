@@ -7,10 +7,26 @@ export default {
   colors: {
     ...theme.colors
   },
+  styles: {
+    ...theme.styles,
+    Flex: {
+      insta: {
+        justifyContent: "center",
+        flexFlow: "row wrap",
+        alignItems: "stretch"
+      }
+    }
+  },
   cards: {
     basic: {
       margin: 2,
-      flex: "0 1 300px"
+      flex: "0 1 300px",
+      position: "relative",
+      ":hover": {
+        div: {
+          opacity: 1
+        }
+      }
     },
     complex: {
       padding: 2,
