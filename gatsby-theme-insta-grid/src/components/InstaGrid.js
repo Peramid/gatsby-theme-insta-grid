@@ -6,12 +6,11 @@ import BasicCard from "./BasicCard";
 
 const InstaGrid = ({ gridType = null, showCaption = false }) => {
   const instagramPosts = useInstagramPosts();
-
-  const CardToShow = ({ post, showCaption }) => {
-    if (gridType === "complex") {
-      return <ComplexCard post={post} showCaption={showCaption} />;
+  const Card = props => {
+    if (props.gridType === "complex") {
+      return <ComplexCard {...props} />;
     }
-    return <BasicCard post={post} />;
+    return <BasicCard {...props} />;
   };
 
   return (
@@ -23,7 +22,7 @@ const InstaGrid = ({ gridType = null, showCaption = false }) => {
       }}
     >
       {instagramPosts.map(post => (
-        <CardToShow post={post} showCaption={showCaption} />
+        <Card {...post} gridType={gridType} showCaption={showCaption} />
       ))}
     </Flex>
   );
