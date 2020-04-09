@@ -1,5 +1,5 @@
 /** @jsx jsx  */
-import { jsx, Card } from "theme-ui";
+import { jsx, Card, Flex } from "theme-ui";
 import { Fragment } from "react";
 import Img from "gatsby-image";
 import HeartIcon from "./HeartIcon";
@@ -12,21 +12,7 @@ const BasicCard = ({ id, caption, likes, comments, image }) => {
     <Card key={id} variant="basic">
       <a href={`https://www.instagram.com/p/${id}/`}>
         <Img fluid={image} alt={caption} />
-        <div
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "rgba(0,0,0,0.4)",
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            top: 0,
-            left: 0,
-            opacity: 0,
-            transition: "opacity 0.3s"
-          }}
-        >
+        <Flex sx={{ variant: "styles.Flex.overlay" }}>
           {likes && (
             <Fragment>
               <HeartIcon fill="#ffffff" />
@@ -43,7 +29,7 @@ const BasicCard = ({ id, caption, likes, comments, image }) => {
               )}`}</NumberText>
             </Fragment>
           )}
-        </div>
+        </Flex>
       </a>
     </Card>
   );
