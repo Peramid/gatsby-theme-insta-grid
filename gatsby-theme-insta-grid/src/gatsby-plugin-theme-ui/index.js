@@ -1,19 +1,29 @@
-import { roboto as theme } from "@theme-ui/presets";
-
-console.log(theme);
-
 export default {
-  ...theme,
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  fonts: {
+    body: "Roboto, system-ui, sans-serif",
+    heading: "Roboto, system-ui, sans-serif",
+    monospace: '"Roboto Mono", monospace'
+  },
+  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontWeights: {
+    body: 400,
+    heading: 600,
+    bold: 600
+  },
+  lineHeights: { body: 1.5, heading: 1.125 },
   colors: {
-    ...theme.colors
+    text: "#000",
+    background: "#fff",
+    primary: "#07c"
   },
   styles: {
-    ...theme.styles,
     Flex: {
       insta: {
         justifyContent: "center",
         flexFlow: "row wrap",
-        alignItems: "stretch"
+        alignItems: "stretch",
+        mx: -2
       },
       overlay: {
         justifyContent: "center",
@@ -59,7 +69,7 @@ export default {
       fontSize: 1,
       lineHeight: "body",
       wordBreak: "break-word",
-      color: theme.colors.text
+      color: "text"
     },
     numbers: {
       pl: 1,
