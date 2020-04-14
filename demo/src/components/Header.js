@@ -10,6 +10,7 @@ const Header = () => {
     >
       <div
         sx={{
+          variant: "styles.h2",
           py: 3,
           mx: "auto",
           maxWidth: 980,
