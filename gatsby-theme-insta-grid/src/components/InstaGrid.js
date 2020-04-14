@@ -15,11 +15,13 @@ const InstaGrid = ({ gridType = null, showCaption = false }) => {
   };
 
   return (
-    <Flex sx={{ variant: "styles.Flex.insta" }}>
-      {instagramPosts.map(post => (
-        <Card {...post} gridType={gridType} showCaption={showCaption} />
-      ))}
-    </Flex>
+    instagramPosts && (
+      <Flex sx={{ variant: "styles.Flex.insta" }}>
+        {instagramPosts.map(post => (
+          <Card {...post} gridType={gridType} showCaption={showCaption} />
+        ))}
+      </Flex>
+    )
   );
 };
 
