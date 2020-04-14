@@ -11,11 +11,6 @@ const Layout = ({ children }) => {
         styles={theme => ({
           "*": {
             boxSizing: "border-box"
-          },
-          body: {
-            fontFamily: theme.fonts.body,
-            fontSize: 20,
-            margin: 0
           }
         })}
       />
