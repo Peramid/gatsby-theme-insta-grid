@@ -60,6 +60,13 @@ export default {
       lineHeight: "body",
       wordBreak: "break-word",
       color: theme.colors.text
+    },
+    numbers: {
+      pl: 1,
+      pr: 2,
+      m: "0",
+      fontSize: "0.9rem",
+      fontWeight: "bold"
     }
   }
 };
