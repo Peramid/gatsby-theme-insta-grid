@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import Img from "gatsby-image";
 import HeartIcon from "./HeartIcon";
 import CommentIcon from "./CommentIcon";
-import NumberText from "./NumberText";
+import Numbers from "./Numbers";
 import { formatNumber } from "../utils/utils";
 
 const BasicCard = ({ id, caption, likes, comments, image }) => {
@@ -16,17 +16,13 @@ const BasicCard = ({ id, caption, likes, comments, image }) => {
           {likes && (
             <Fragment>
               <HeartIcon fill="#ffffff" />
-              <NumberText color="#ffffff">{`${formatNumber(
-                likes
-              )}`}</NumberText>
+              <Numbers color="#ffffff">{`${formatNumber(likes)}`}</Numbers>
             </Fragment>
           )}
           {comments && (
             <Fragment>
               <CommentIcon fill="#ffffff" />
-              <NumberText color="#ffffff">{`${formatNumber(
-                comments
-              )}`}</NumberText>
+              <Numbers color="#ffffff">{`${formatNumber(comments)}`}</Numbers>
             </Fragment>
           )}
         </Flex>

@@ -1,7 +1,7 @@
 /** @jsx jsx  */
 import { jsx, Text } from "theme-ui";
 
-const NumberText = ({ children, color }) => {
+const Numbers = ({ children, color }) => {
   return (
     <Text
       sx={{
@@ -14,4 +14,4 @@ const NumberText = ({ children, color }) => {
   );
 };
 
-export default NumberText;
+export default Numbers;

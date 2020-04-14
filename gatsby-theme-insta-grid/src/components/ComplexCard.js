@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import Img from "gatsby-image";
 import HeartIcon from "./HeartIcon";
 import CommentIcon from "./CommentIcon";
-import NumberText from "./NumberText";
+import Numbers from "./Numbers";
 import { formatNumber } from "../utils/utils";
 
 const ComplexCard = ({ id, caption, likes, comments, image, showCaption }) => {
@@ -19,17 +19,17 @@ const ComplexCard = ({ id, caption, likes, comments, image, showCaption }) => {
         {likes && (
           <Fragment>
             <HeartIcon fill={theme.colors.text} />
-            <NumberText color={theme.colors.text}>
+            <Numbers color={theme.colors.text}>
               {`${formatNumber(likes)}`}
-            </NumberText>
+            </Numbers>
           </Fragment>
         )}
         {comments && (
           <Fragment>
             <CommentIcon fill={theme.colors.text} />
-            <NumberText color={theme.colors.text}>{`${formatNumber(
+            <Numbers color={theme.colors.text}>{`${formatNumber(
               comments
-            )}`}</NumberText>
+            )}`}</Numbers>
           </Fragment>
         )}
       </Flex>
