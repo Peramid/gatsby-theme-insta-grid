@@ -1,20 +1,16 @@
 /** @jsx jsx  */
-import { jsx } from "theme-ui";
+import { jsx, Text } from "theme-ui";
 
 const NumberText = ({ children, color }) => {
   return (
-    <p
+    <Text
       sx={{
-        pl: 1,
-        pr: 2,
-        m: "0",
-        fontSize: "0.9rem",
-        fontWeight: "bold",
+        variant: "text.numbers",
         color
       }}
     >
       {children}
-    </p>
+    </Text>
   );
 };
 
