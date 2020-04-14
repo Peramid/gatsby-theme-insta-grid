@@ -15,13 +15,7 @@ const ComplexCard = ({ id, caption, likes, comments, image, showCaption }) => {
       <a href={`https://www.instagram.com/p/${id}/`}>
         <Img fluid={image} alt={caption} />
       </a>
-      <Flex
-        sx={{
-          alignItems: "center",
-          justifyContent: "flex-end",
-          py: 2
-        }}
-      >
+      <Flex sx={{ variant: "styles.Flex.complex" }}>
         {likes && (
           <Fragment>
             <HeartIcon fill={theme.colors.text} />
@@ -39,18 +33,7 @@ const ComplexCard = ({ id, caption, likes, comments, image, showCaption }) => {
           </Fragment>
         )}
       </Flex>
-      {showCaption && (
-        <Text
-          sx={{
-            fontSize: 1,
-            lineHeight: "body",
-            wordBreak: "break-word",
-            color: theme.colors.text
-          }}
-        >
-          {caption}
-        </Text>
-      )}
+      {showCaption && <Text variant="caption">{caption}</Text>}
     </Card>
   );
 };
