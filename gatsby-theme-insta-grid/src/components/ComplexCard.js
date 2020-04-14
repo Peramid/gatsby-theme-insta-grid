@@ -7,7 +7,7 @@ import CommentIcon from "./CommentIcon";
 import Numbers from "./Numbers";
 import { formatNumber } from "../utils/utils";
 
-const ComplexCard = ({ id, caption, likes, comments, image, showCaption }) => {
+const ComplexCard = ({ id, caption, likes, comments, image, showCaptions }) => {
   const { theme } = useThemeUI();
 
   return (
@@ -33,7 +33,7 @@ const ComplexCard = ({ id, caption, likes, comments, image, showCaption }) => {
           </Fragment>
         )}
       </Flex>
-      {showCaption && <Text variant="caption">{caption}</Text>}
+      {showCaptions && <Text variant="caption">{caption}</Text>}
     </Card>
   );
 };
