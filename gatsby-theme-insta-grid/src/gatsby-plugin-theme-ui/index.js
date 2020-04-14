@@ -26,6 +26,11 @@ export default {
         left: 0,
         opacity: 0,
         transition: "opacity 0.3s"
+      },
+      complex: {
+        alignItems: "center",
+        justifyContent: "flex-end",
+        py: 2
       }
     }
   },
@@ -47,6 +52,14 @@ export default {
       boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
       backgroundColor: "#ffffff",
       flex: "0 1 300px"
+    }
+  },
+  text: {
+    caption: {
+      fontSize: 1,
+      lineHeight: "body",
+      wordBreak: "break-word",
+      color: theme.colors.text
     }
   }
 };
