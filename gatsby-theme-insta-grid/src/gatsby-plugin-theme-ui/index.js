@@ -1,4 +1,5 @@
 export default {
+  breakpoints: ["40em", "52em", "64em"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body: "Roboto, system-ui, sans-serif",
@@ -23,7 +24,7 @@ export default {
         justifyContent: "center",
         flexFlow: "row wrap",
         alignItems: "stretch",
-        mx: -2
+        margin: -2
       },
       overlay: {
         justifyContent: "center",
@@ -46,8 +47,9 @@ export default {
   },
   cards: {
     basic: {
-      margin: 2,
-      flex: "0 1 300px",
+      padding: 2,
+      flexGrow: 1,
+      flexBasis: ["100%", "50%", "30%"],
       position: "relative",
       ":hover": {
         div: {
@@ -58,10 +60,11 @@ export default {
     complex: {
       padding: 2,
       margin: 2,
+      flexGrow: 1,
+      flexBasis: ["100%", "50%", "30%"],
       borderRadius: 4,
       boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
-      backgroundColor: "#ffffff",
-      flex: "0 1 300px"
+      backgroundColor: "#ffffff"
     }
   },
   text: {
