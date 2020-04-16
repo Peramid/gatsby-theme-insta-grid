@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header
       sx={{
-        backgroundColor: "primary"
+        backgroundColor: "primary",
       }}
     >
       <div
@@ -16,7 +16,6 @@ const Header = () => {
           maxWidth: 980,
           width: "90vw",
           color: "background",
-          fontWeight: "bold"
         }}
       >
         Gatsby Theme Insta Grid
