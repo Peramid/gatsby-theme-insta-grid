@@ -4,11 +4,11 @@ import useInstagramPosts from "../hooks/useInstagramPosts";
 import ComplexCard from "./ComplexCard";
 import BasicCard from "./BasicCard";
 
-const InstaGrid = ({ gridType = null, showCaptions = false }) => {
+const InstaGrid = ({ cardType = null, showCaptions = false }) => {
   const instagramPosts = useInstagramPosts();
 
-  const Card = props => {
-    if (props.gridType === "complex") {
+  const Card = (props) => {
+    if (props.cardType === "complex") {
       return <ComplexCard {...props} />;
     }
     return <BasicCard {...props} />;
@@ -17,8 +17,8 @@ const InstaGrid = ({ gridType = null, showCaptions = false }) => {
   return (
     instagramPosts && (
       <Flex sx={{ variant: "styles.Flex.insta" }}>
-        {instagramPosts.map(post => (
-          <Card {...post} gridType={gridType} showCaptions={showCaptions} />
+        {instagramPosts.map((post) => (
+          <Card {...post} cardType={cardType} showCaptions={showCaptions} />
         ))}
       </Flex>
     )
