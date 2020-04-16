@@ -61,7 +61,7 @@ export default {
       padding: 2,
       margin: 2,
       flexGrow: 1,
-      flexBasis: ["100%", "50%", "30%", "25%"],
+      flexBasis: ["100%", "50%", "30%"],
       borderRadius: 4,
       boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
       backgroundColor: "#ffffff",
