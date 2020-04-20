@@ -19,6 +19,7 @@ export default {
     primary: "#07c",
   },
   styles: {
+    root: { fontFamily: "body", lineHeight: "body", fontWeight: "body" },
     Flex: {
       insta: {
         justifyContent: "center",
@@ -37,11 +38,6 @@ export default {
         left: 2,
         opacity: 0,
         transition: "opacity 0.3s",
-      },
-      complex: {
-        alignItems: "center",
-        justifyContent: "flex-end",
-        py: 2,
       },
     },
   },
@@ -65,6 +61,11 @@ export default {
       borderRadius: 4,
       boxShadow: "0 0 8px rgba(0, 0, 0, 0.125)",
       backgroundColor: "#ffffff",
+      "a + div": {
+        alignItems: "center",
+        justifyContent: "flex-end",
+        py: 2,
+      },
     },
   },
   text: {
