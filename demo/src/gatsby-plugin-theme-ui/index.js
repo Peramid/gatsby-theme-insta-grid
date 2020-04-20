@@ -1,4 +1,4 @@
-import baseTheme from "gatsby-theme-insta-grid/src/gatsby-plugin-theme-ui";
+import baseTheme from "@melanienolan/gatsby-theme-insta-grid/src/gatsby-plugin-theme-ui";
 
 export default {
   ...baseTheme,
