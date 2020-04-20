@@ -1,6 +1,6 @@
 {
   "name": "@melanienolan/gatsby-theme-insta-grid",
-  "author": "Melanie Nolan",
+  "author": "Melanie Nolan <melly.nolan@gmail.com>",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
