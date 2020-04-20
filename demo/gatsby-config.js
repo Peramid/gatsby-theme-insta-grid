@@ -1,24 +1,24 @@
 module.exports = {
   siteMetadata: {
     title: `Gatsby Theme Insta Grid Demo`,
-    description: `The online demo for the Insta Grid Gatsby Theme`,
-    author: `@melanienolan`
+    description: `The online demo for Gatsby Theme Insta Grid`,
+    author: `@melanienolan`,
   },
   plugins: [
     {
       resolve: "gatsby-theme-insta-grid",
       options: {
-        username: "nasa"
-      }
+        username: "nasa",
+      },
     },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
-          default: require.resolve("./src/components/Layout.js")
-        }
-      }
+          default: require.resolve("./src/components/Layout.js"),
+        },
+      },
     },
-    "gatsby-plugin-react-helmet"
-  ]
+    "gatsby-plugin-react-helmet",
+  ],
 };
