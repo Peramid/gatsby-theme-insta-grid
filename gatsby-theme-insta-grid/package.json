@@ -1,10 +1,6 @@
 {
-  "name": "gatsby-theme-insta-grid",
+  "name": "@melanienolan/gatsby-theme-insta-grid",
   "author": "Melanie Nolan",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/melanienolan/gatsby-theme-instagrid.git"
-  },
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -33,9 +29,14 @@
     "gatsby-transformer-sharp": "^2.3.19",
     "theme-ui": "^0.3.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melanienolan/gatsby-theme-insta-grid.git"
+  },
   "keywords": [
     "gatsby",
     "gatsby-theme",
+    "gatsby-plugin",
     "instagram",
     "gatsby-source-instagram"
   ]
