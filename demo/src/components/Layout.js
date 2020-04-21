@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui";
 import { Fragment } from "react";
 import { Helmet } from "react-helmet";
-import Header from "./Header";
+import Hero from "./Hero";
 import useSiteMetadata from "../hooks/useSiteMetadata";
 
 const Layout = ({ children }) => {
@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
         <meta name="description" content={description} />
         <title>{title}</title>
       </Helmet>
-      <Header />
+      <Hero />
       <main sx={{ my: 4, mx: "auto", width: "90vw", maxWidth: "980px" }}>
         {children}
       </main>
