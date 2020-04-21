@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx, Styled } from "theme-ui";
 
 const Hero = () => {
   return (
@@ -21,8 +21,10 @@ const Hero = () => {
           color: "background",
         }}
       >
-        <h1 sx={{ fontSize: "5rem" }}>Gatsby Theme Insta Grid</h1>
-        <code>yarn add @melanienolan/gatsby-theme-insta-grid</code>
+        <Styled.h1>Gatsby Theme Insta Grid</Styled.h1>
+        <Styled.code>
+          yarn add @melanienolan/gatsby-theme-insta-grid
+        </Styled.code>
       </div>
     </section>
   );
