@@ -4,18 +4,23 @@ export default {
   ...baseTheme,
   fonts: {
     ...baseTheme.fonts,
-    body: "system-ui, sans-serif",
-    heading: '"Avenir Next", sans-serif',
+    body: '"Avenir Next", system-ui, sans-serif',
+    heading: "inherit",
     monospace: "Menlo, monospace",
+  },
+  fontWeights: {
+    ...baseTheme.fontWeights,
+    heading: 700,
+    bold: 700,
   },
   styles: {
     ...baseTheme.styles,
     h1: {
-      color: "text",
+      color: "background",
       fontFamily: "heading",
       lineHeight: "heading",
       fontWeight: "heading",
-      fontSize: 5,
+      fontSize: 7,
     },
     h2: {
       color: "text",
@@ -34,6 +39,17 @@ export default {
     p: {
       color: "text",
       fontFamily: "body",
+      fontWeight: "body",
+      lineHeight: "body",
+    },
+    a: {
+      color: "primary",
+      fontFamily: "body",
+      fontWeight: "body",
+      lineHeight: "body",
+    },
+    code: {
+      fontFamily: "monospace",
       fontWeight: "body",
       lineHeight: "body",
     },
