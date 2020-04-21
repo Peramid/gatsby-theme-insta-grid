@@ -23,14 +23,14 @@ export default {
       fontSize: 7,
     },
     h2: {
-      color: "text",
+      color: "primary",
       fontFamily: "heading",
       lineHeight: "heading",
       fontWeight: "heading",
       fontSize: 4,
     },
     h3: {
-      color: "text",
+      color: "primary",
       fontFamily: "heading",
       lineHeight: "heading",
       fontWeight: "heading",
@@ -41,12 +41,14 @@ export default {
       fontFamily: "body",
       fontWeight: "body",
       lineHeight: "body",
+      fontSize: 3,
     },
     a: {
       color: "primary",
       fontFamily: "body",
       fontWeight: "body",
       lineHeight: "body",
+      textDecoration: "none",
     },
     code: {
       fontFamily: "monospace",
@@ -58,7 +60,7 @@ export default {
     ...baseTheme.colors,
     text: "#222222",
     background: "#ffffff",
-    primary: "#3D5A80",
+    primary: "#000046",
   },
   text: {
     ...baseTheme.text,
